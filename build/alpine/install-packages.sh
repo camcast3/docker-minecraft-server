@@ -3,6 +3,8 @@
 set -e
 set -o pipefail
 
+apk update && apk upgrade
+
 apk add --no-cache -U \
     openssl \
     imagemagick \
