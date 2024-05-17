@@ -2,16 +2,16 @@ services:
   monitor:
     depends_on:
       - mc
-    image: ${IMAGE_TO_TEST:-itzg/minecraft-server}
+    image: ${IMAGE_TO_TEST:-camcast3/minecraft-server}
     entrypoint: mc-monitor
     command: status --host mc --retry-interval 1s --timeout 1s --retry-limit 60
   mc:
     restart: "no"
-    image: ${IMAGE_TO_TEST:-itzg/minecraft-server}
+    image: ${IMAGE_TO_TEST:-camcast3/minecraft-server}
     environment:
       EULA: "TRUE"
       VERSION: ${MINECRAFT_VERSION:-LATEST}
       TYPE: PAPER
-      # regression tests https://github.com/itzg/docker-minecraft-server/issues/2545
+      # regression tests https://github.com/camcast3/docker-minecraft-server/issues/2545
       MOTD: "Foo§rBar"
 

@@ -1,11 +1,11 @@
 services:
   mc:
     restart: "no"
-    image: ${IMAGE_TO_TEST:-itzg/minecraft-server}
+    image: ${IMAGE_TO_TEST:-camcast3/minecraft-server}
     environment:
       EULA: "TRUE"
       SETUP_ONLY: "TRUE"
-      WHITELIST: itzg
+      WHITELIST: camcast3
       ENFORCE_WHITELIST: "true"
       OVERRIDE_SERVER_PROPERTIES: "true"
       # the following are only used to speed up test execution

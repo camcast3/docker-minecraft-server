@@ -46,7 +46,7 @@ setupOnlyMinecraftTest(){
     outputContainerLog "$logs"
     result=1
   elif [ -f verify.sh ]; then
-    if ! docker run --rm --entrypoint bash -v "${PWD}/data":/data -v "${PWD}/verify.sh":/verify "${IMAGE_TO_TEST:-itzg/minecraft-server}" -e /verify; then
+    if ! docker run --rm --entrypoint bash -v "${PWD}/data":/data -v "${PWD}/verify.sh":/verify "${IMAGE_TO_TEST:-camcast3/minecraft-server}" -e /verify; then
       endTime=$(date +%s)
       echo "${folder} FAILED verify in $(delta start)"
       outputContainerLog "$logs"

@@ -6,7 +6,7 @@ services:
   mc:
     depends_on:
       - web
-    image: ${IMAGE_TO_TEST:-itzg/minecraft-server}
+    image: ${IMAGE_TO_TEST:-camcast3/minecraft-server}
     environment:
       EULA: "true"
       SETUP_ONLY: "true"
