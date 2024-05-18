@@ -1,11 +1,11 @@
 services:
   mc:
     restart: "no"
-    image: ${IMAGE_TO_TEST:-camcast3/minecraft-server}
+    image: ${IMAGE_TO_TEST:-itzg/minecraft-server}
     environment:
       EULA: "TRUE"
       SETUP_ONLY: "TRUE"
-      OPS: camcast3
+      OPS: itzg
       # the following are only used to speed up test execution
       TYPE: CUSTOM
       CUSTOM_SERVER: /servers/fake.jar

@@ -5,7 +5,7 @@ services:
     environment:
       EULA: "TRUE"
       SETUP_ONLY: "TRUE"
-      WHITELIST: camcast3
+      WHITELIST: itzg
       ENFORCE_WHITELIST: "true"
       OVERRIDE_SERVER_PROPERTIES: "true"
       # the following are only used to speed up test execution
